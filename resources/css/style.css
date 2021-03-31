@@ -1,0 +1,479 @@
+/* default set up */
+*{
+    padding: 0px ;
+    margin: 0px ;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Lato', sans-serif;
+    /* default 16px */
+    font-size: 20px; 
+    color: #5a5a5a;
+    background-color: #ffffff;
+    /* hien thi chu tren web */
+    text-rendering: optimizeLegibility;
+
+}
+body{
+    overflow-x: hidden;
+}
+/* reusable coponent */
+/* ------------------------------------------------------- */
+
+.btn{
+    text-decoration: none;
+    color: wheat;
+    background-color: #e67e22;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin: 0px 10px -30px 0px;
+    width: 190px;
+    display: inline-block;
+    text-align: center;
+    transition: all .3s;
+    
+}
+.btn:hover,
+.btn:active {
+    background-color: orangered;
+}
+.clearfix::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+.row{
+    width: 1140px;
+    margin: 0 auto;
+}
+h1,h2,h3{
+    text-transform: uppercase;
+    letter-spacing: 3px ;
+}
+h1{
+   
+    font-weight: 400px;
+    
+    word-spacing: 5px;
+    color: white;
+    line-height: 70px;
+    margin-bottom: 50px;
+}
+h2{
+    text-align: center;
+    color: orange;
+    font-size: 180%;
+    font-weight: 700;
+}
+h2:after{
+    content: " ";
+    display: block;
+    width: 150px;
+    background-color: rgba(218, 82, 29, 0.8);
+    margin: 0 auto;
+    height: 3px;
+    margin-top: 5px;
+
+}
+h3{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #D83F87;
+    color: white;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-bottom: 15px;
+}
+.p-long{
+    text-align: center;
+    color: #2A1B3D;
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 70%;
+    margin-left: 15%;
+    line-height: 140%;
+}
+section{
+    padding: 50px;
+}
+.small-icon{
+    color: #7f4ac5;
+    font-size: 130%;
+    margin-right: 10px;
+}
+
+/*---------------------- header----------------------------------- */
+header{
+    background-image: linear-gradient(45deg, rgba(42, 27, 61,0.8) 50%,rgba(68, 49, 141,0.8),rgb(164, 179, 182,0.8)), url("../images/background2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+.logo{
+    width: 200px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: -100px;
+}
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+    margin-right: 50px;
+    
+}
+.main-nav li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 90%;
+    font-weight: 700px;
+    transition: border-bottom 0.5s;
+    padding: 3px 0px;
+}
+/* using pseudo-class */
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #cccccc;
+    
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+
+.heading-main-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,15%);
+    width: 1140px;
+    margin-bottom: 20px;
+}
+/* ---------------------Sticky------------------------------ */
+.sticky{
+    background-color: rgba(42, 27, 61,0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    padding-bottom: 10px;
+    
+    
+}
+
+/* Logo stays inside sticky */
+.sticky .logo{
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: -100px;
+    
+    margin-left: 5px;
+
+}
+.sticky .main-nav{
+    margin-top: 20px;
+}
+
+/* --------------/Mobile navigation icon----------------- */
+.mobile-nav-icon{
+    
+    font-size: 200%;
+    color: rgb(68, 49, 141);
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    display: none;
+    /* visibility: hidden; */
+   
+    
+}
+.sticky .mobile-nav-icon{
+    
+    top: 30px;
+    /* display: none; */
+}
+
+/* ---------------------------------- */
+/* ----------------About section----------------------------- */
+/* ---img in small size passed in grid -------------------*/
+
+.about-picture{
+    position: relative;
+    margin-top: 50px;
+}
+.about-picture img{
+    width: 90%;
+    border-radius: 20px;
+    border : 4px solid #44318D;
+    box-shadow: 0px 5px 10px 5px #1a689c;
+    transition: all .5s;
+    /* filter: brightness(50%) blur(2px); */
+    margin-bottom: 50px;
+
+}
+.picture-title{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    color: silver;
+    transform: translate(-50%,100%);
+    opacity: 0;
+    transition: all .5s;
+}
+.about-picture:hover img,
+.about-picture:active img{
+    filter: brightness(50%) blur(2px);
+}
+.about-picture:hover .picture-title,
+.about-picture:active .picture-title{
+    transform: translate(-65%,-50%);
+    opacity: 1;
+}
+.about-section{
+    margin-bottom: 50px;
+}
+
+/* ----------------Product section-------------- */
+/* ----------------------------- */
+.product-section{
+    /* background-color: #A4B3B6; */
+    margin-top: 100px;
+    height: 120%;
+    margin-top: 30px;
+    display: block;
+}
+.product-section h2{
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+.product-box{
+    background-color: #eeefff;
+    width: 90%;
+    height: 400px;
+    box-shadow: 3px 5px 10px #e0e0e0;
+    margin-bottom: 50px;
+}
+.product-price{
+    color: #E98074;
+    font-size: 250%;
+    font-weight: 300;
+    text-align: center;
+}
+.product-price span{
+    font-size: 80%;
+    /* 80% of parent class product-price */
+    
+}
+.product-box ul li{
+    margin-left: 35%;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.product-box .btn{
+    margin-left: 25%;
+}
+
+/* --------------------Testimonials-Section------------ */
+/* ------------ ---------------------------------------*/
+.testimonials-section{
+    background-image: linear-gradient(45deg, rgba(42, 27, 61,0.8) 50%,rgba(68, 49, 141,0.8),rgba(164, 179, 182,0.8)), url("../images/background2.jpg");
+    background-position: center;
+    background-color: #44318D;
+    background-size: 200vh;
+    background-attachment: fixed;
+    height: 100vh;
+    margin-top: 400px;
+
+}
+.testimonials-section h2{
+    margin-bottom: 70px;
+}
+blockquote{
+    width: 95%;
+    position: relative;
+    
+    font-style: italic;
+    line-height: 140%;
+    color: white;
+
+}
+blockquote:before{
+    content: "\201c";
+    display: block;
+    font-size: 400%;
+    position: absolute;
+    top: -10px;
+    left:  -10px;
+}
+cite{
+    display: block;
+    color: #A4B3B6;
+    margin-top: 25px;
+}
+.testimo-img{
+    width: 140px;
+    border-radius: 50%;
+    width: 40%;
+    border: 2px solid #3a1eb8;
+    display: block;
+    /* vertical-align: middle; */
+    margin-right: 5px;
+}
+/* .cite img{
+    height: 50px;
+    width: 140px;
+    border-radius: 50%;
+    width: 50%;
+    border: 2px solid #3a1eb8;
+    
+    vertical-align: middle;
+    margin-right: 5px; 
+}*/
+/* ------------------Sponsors Section------------- */
+/* -------------------------------------------------- */
+.sponsors-section{
+    color: #f4f4f4;
+}
+.sponsors-section h2{
+    margin-bottom: 50px;
+}
+.sponsor-show-case{
+    margin-left: 9%;
+}
+
+.sponsor-show-case li{
+    list-style: none;
+    float: left;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sponsor-show-case li .logo-sponsor:hover,
+.sponsor-show-case li .logo-sponsor:active{
+    transform: scale(1.2);
+    
+}
+.logo-sponsor{
+    width: 140px;
+}
+figcaption{
+    color: #2A1B3D;
+    font-weight: 900;
+    font-size: 120%;
+    cursor: pointer;
+}
+/* -----------------------Contact-form--------------------- */
+/* ------------------------------------------------------------ */
+.contact-section{
+    background-image: linear-gradient(45deg, rgba(42, 27, 61,0.8) 50%,rgba(68, 49, 141,0.8),rgba(164, 179, 182,0.8)), url(../images/IMG_7619.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+}
+.information{
+    list-style: none;
+    color: white;
+    line-height: 200%;
+    margin-top: 60px;
+    margin-left: 50px;
+    word-spacing: 1px;
+    font-size: 90%;
+}
+.information .small-icon:hover,
+.information .small-icon:active{
+    transform: scale(1.3);
+}
+.social-icon{
+    margin-top: 0px;
+    list-style: none;
+    margin-left: 70px;
+}
+.social-icon li{
+    display: inline-block;
+    font-size: 250%;
+    margin-left: 20px;
+    color: white;
+    margin-top: 30px;
+}
+.social-icon li i{
+    transition: all .3s;
+    cursor: pointer;
+}
+.social-icon li i:hover,
+.social-icon li i:active{
+    transform: scale(1.3);
+    color: #E98074;
+    
+}
+form{
+    height: 200%;
+    margin-top: 30px;
+    /* margin-bottom: 30px; */
+}
+form .row{
+    background-color: rgba(0,0,0, 0.4);
+    background-size: cover;
+    margin-left: 80%;
+    width: 120%;
+    padding: 20px;
+    
+    
+}
+input, textarea{
+    outline: none;
+    padding: 12px;
+    width: 100%;
+    background-color: rgba(48,47,47,0.3);
+    border: 1px solid rgba(117, 115, 115, 0.3) ;
+    cursor: pointer;
+    border-radius: 5px;
+}
+label{
+    color: white;
+}
+input{
+    height: 30px;
+}
+input[type=text], input[type=email], textarea{
+    width: 90%;
+    font-size: 70%;
+    transition: all .3s;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus{
+    color: white;
+    background: rgba(48,47,47,0.8);
+}
+textarea{
+    resize: none;
+    height: 80px;
+}
+form .row:last-child{
+    text-align: center;
+}
+input[type=submit]{
+    font-weight: 700;
+    font-size: 100%;
+    border-radius: 5px;
+    width: 50%;
+    height: 50px;
+    
+    
+}
+/* ----------------------Footer---------------------- */
+/* ------------------------------------------------------ */
+footer{
+    text-align: center;
+    background-color: rgb(48, 53, 54);
+    color: white;
+    padding: 20px;
+}

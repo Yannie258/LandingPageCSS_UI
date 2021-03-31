@@ -1,0 +1,241 @@
+/* Big tablet to 1200px; */
+@media only screen  and (max-width:1200px){
+  html{
+      font-size: 16px;
+  }
+  /* ---alter perform of heading main box pass to screen----- */
+  .heading-main-box{
+      transform: translate(-40%,-10%);
+  }
+  form .row{
+      margin-left: 30%;
+  }
+  
+  h2{
+      width: 80%;
+  }
+  .about-section h2, .row{
+      width: 107%;
+  }
+  
+  .product-section h2, .row{
+      width: 100%;
+     
+  }
+  
+  .testimonials-section h2, .row{
+      width: 107%;
+  }
+  .sponsors-section h2, .row{
+      width: 107%;
+  }
+  .mobile-nav-icon{
+      display: none;
+  }
+}
+ 
+/* Small tablet to big tablet from 768x to 1023px */
+@media only screen and (max-width:1023px){
+    .mobile-nav-icon{
+        display: none;
+    }
+     .logo{
+         width: 150px;
+     }
+     .heading-main-box{
+         transform: translate(-25%,-30%);
+     }
+     .product-section .btn{
+         width: 80%;
+         /* -- bescause of width:80% -->20%/2=10% both of side --- */
+         margin-left: 10%; 
+     }
+     .product-box{
+         width: 95%;
+     }
+     .product-price{
+         font-size: 200%;
+     }
+     .social-icon{
+         margin-left: 5px;
+     }
+     .social-icon li{
+         
+         font-size: 200%;
+     }
+     .information i{
+         display: block;
+     }
+     .information li{
+         font-size: 12px;
+     }
+}
+ 
+/* Small phones to small tablets from 480px -770px*/
+@media only screen and (max-width: 767px){
+    .col{
+        width: 100%;
+    }
+    .main-nav{
+        display: none;
+    }
+    /* //when main-nav disappears, then appear bars */
+    .mobile-nav-icon{
+        display: block;
+    }
+    .logo{
+        width: 120px;
+    }
+    .heading-main-box{
+        transform: translate(-15%,-50%);
+    }
+    .heading-main-box .btn{
+        width: 15%;
+    }
+    
+    .about-section .row .p-long{
+        font-size: 20px;
+    }
+    .picture-title{
+        font-size: 30px;
+    }
+    .product-box{
+        width: 80%;
+    }
+    .product-section .btn{
+        width: 80%;
+    }
+    .testimonials-section{
+        margin-top: 300%;
+        height: 200vh;
+    }
+    cite{
+        margin-bottom: 80px;
+    }
+    figcaption{
+        visibility: hidden;
+    }
+    form .row{
+        width: 100%;
+        margin-left: 0%;
+    }
+    label{
+        margin-left: 40%;
+    }
+    .information{
+        margin-top: 10px;
+        text-align: center;
+        
+    }
+    .information li{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .social-icon {
+        text-align: center;
+    }
+    .social-icon li{
+        font-size: 60px;
+    }
+    .contact-section{
+        height: 130vh;
+    }
+}
+
+ /* ---Small phones from 480px to 570px */
+@media only screen and (max-width: 570px){
+    .mobile-nav-icon{
+        right: 50px;
+        
+    }
+}
+
+
+
+/* Small phones from 0 to 480px; */
+@media only screen and (max-width: 480px){
+   
+ html{
+     font-size: 12px;
+ }
+ .heading-main-box .btn{
+     display: block;
+     margin-bottom: 20px;
+     margin-left: 7%;
+ }
+ .heading-main-box h1{
+    transform: translate(5%,20%);
+    line-height: 50px;
+    font-size: 150%;
+ }
+ header{
+     height: 80vh;
+ }
+ .logo{
+     width: 80%;
+     margin-left: 10%;
+    
+ }
+ .about-section .row .p-long{
+     font-size: 14px;
+     margin-left: 5px;
+ }
+ .about-section h2{
+     margin-left: 5px;
+     display: block;
+     
+ }
+ .product-box{
+    height: 300px;
+}
+.testimonials-section{
+    margin-top: 420%;
+    height: 180vh;
+}
+.sponsors-section .row ul li figure .logo-sponsor{
+    display: block;
+}
+.information{
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+}
+
+.information li{
+    font-size: 10px;
+}
+.social-icon li{
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+form{
+    width: 100%;
+    margin-left: 0;
+}
+
+form .row .btn{
+    padding: 5px;
+    height: 30px;
+}
+.contact-section{
+    height: 110vh;
+}
+nav {
+    display: inline-block;
+}
+.logo-sponsor{
+    width: 140%;
+}
+.sticky .mobile-nav-icon{
+    color:rgba(68, 49, 141,.8);
+    right: 30px;
+    top: 20px;
+    display: block;
+}
+.sticky .logo{
+    width: 80px;
+    margin-top: 3px;
+}
+}
